@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xora Key System</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow: hidden;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        .title {
+            text-align: center;
+            color: white;
+            font-size: 58px;
+            font-style: italic;
+            margin-top: 50px;
+        }
+
+        .button-panel {
+            width: 700px;
+            height: 300px;
+            margin: 100px auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        }
+
+        .button {
+            padding: 20px 40px;
+            background-color: rgba(75, 0, 128, 1);
+            color: white;
+            font-size: 18px;
+            font-style: italic;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color: rgba(0, 168, 255, 1);
+            transform: scale(1.1);
+        }
+
+        .footer {
+            text-align: center;
+            color: #ccc;
+            font-size: 12px;
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+        }
+
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: moveStar 10s infinite linear;
+        }
+
+        @keyframes moveStar {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="title">Xora Key Generator</div>
+
+    <div class="button-panel">
+        <a href="https://direct-link.net/1259238/key-system" class="button" target="_blank">Linkvertise</a>
+    </div>
+
+    <div class="footer">© 2024 Xora Tools - All rights reserved</div>
+
+    <!-- Star field animation -->
+    <script>
+        const starCount = 400;
+        const starField = document.body;
+
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            const size = Math.random() * 3 + 1;
+            const xPos = Math.random() * window.innerWidth;
+            const yPos = Math.random() * window.innerHeight;
+
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.left = `${xPos}px`;
+            star.style.top = `${yPos}px`;
+            star.style.animationDuration = `${Math.random() * 5 + 5}s`; // Varying speeds for stars
+
+            starField.appendChild(star);
+        }
+
+        // Optional: Handle resize events to keep the stars within the viewport
+        window.addEventListener('resize', () => {
+            const stars = document.querySelectorAll('.star');
+            stars.forEach(star => {
+                star.style.left = `${Math.random() * window.innerWidth}px`;
+                star.style.top = `${Math.random() * window.innerHeight}px`;
+            });
+        });
+    </script>
+</body>
+</html>
